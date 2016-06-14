@@ -52,6 +52,7 @@ module Spree
 
     after_create :create_stock_items
     after_create :set_master_out_of_stock, unless: :is_master?
+    before_destroy :ensure_no_line_items
 
     after_touch :clear_in_stock_cache
 
