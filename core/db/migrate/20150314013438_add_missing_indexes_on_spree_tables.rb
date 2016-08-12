@@ -1,4 +1,4 @@
-class AddMissingIndexes < ActiveRecord::Migration
+class AddMissingIndexesOnSpreeTables < ActiveRecord::Migration
   def change
     add_index   :spree_promotion_rules_users,
                         [:user_id, :promotion_rule_id],
